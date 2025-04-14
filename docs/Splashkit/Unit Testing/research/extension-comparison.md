@@ -1,4 +1,9 @@
-# CMake Tools
+# Visual Studio Code extensions for unit testing
+I've found two extensions to integrate unit testing into VS Code. Here's a brief comparison of each. It's
+also worth noting that both of these can be installed at the same time, if the user doesn't mind having two
+sets of tests in VS Code, each under their own tree.
+
+## CMake Tools
 - Author: Microsoft
 - https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools
 - https://github.com/microsoft/vscode-cmake-tools
@@ -20,7 +25,7 @@ Due to the way it reads tests from CTest, it doesn't allow you to click a test t
 and the tests are structured in a flat list. A tree review requires renaming the tests themselves with delmiters that
 the extension can read, for example "utilities/is_prime".
 
-# C++ Test Mate
+## C++ Test Mate
 - Author: Mate Pek
 - https://marketplace.visualstudio.com/items?itemName=matepek.vscode-catch2-test-adapter
 - https://github.com/matepek/vscode-catch2-test-adapter
@@ -34,7 +39,6 @@ Doesn't currently have a coverage feature, so that would have to be done via a s
 https://github.com/matepek/vscode-catch2-test-adapter/issues/433
 Gcov viewer is an option for this, but isn't as nicely integrated with VS Code, and doesn't have a nice coverage summary.
 https://marketplace.visualstudio.com/items?itemName=JacquesLucke.gcov-viewer 
-
 
 Currently has a problem with Catch2 2.x (which we use), where test names greater than 80 characters fail to get run.
 https://github.com/matepek/vscode-catch2-test-adapter/issues/21
