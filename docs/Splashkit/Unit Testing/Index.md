@@ -10,6 +10,6 @@ functioning as expected. Unit tests allow us to efficiently test and validate th
 Currently, unit testing isn't given much of a spotlight in documentation, and developing and running tests is more
 cumbersome than it could be. So, goals for unit testing are:
 
-- Research ways of improving unit testing workflow, including integration into Visual Studio Code (since this is the IDE recommended
-in SplashKit documentation)
+- Research ways of improving unit testing workflow, including integration into Visual Studio Code, which is the 
+IDE recommended in SplashKit documentation
 - Create documentation for unit testing, including an onboarding guide for those wanting to write and run unit tests

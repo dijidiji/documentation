@@ -1,6 +1,6 @@
 # Current workflow
 
-As can be seen, the current workflow is pretty simple to set up but involves using the command line (including
+As can be seen, the current workflow doesn't require a lot of set up but involves using the command line (including
 debugging).
 
 ## Linux
@@ -9,14 +9,14 @@ debugging).
 
     - Update
 
-        ```sh
+        ```shell
         sudo apt-get update
         sudo apt-get upgrade -y
         ```
 
     - Install
 
-        ```sh
+        ```shell
         sudo apt-get install -y \
         git build-essential cmake g++ libpng-dev libcurl4-openssl-dev libsdl2-dev \
         libsdl2-mixer-dev libsdl2-gfx-dev libsdl2-image-dev libsdl2-net-dev libsdl2-ttf-dev \
@@ -25,7 +25,7 @@ debugging).
 
 2. Build test project
 
-    ```sh
+    ```shell
     cd projects/cmake
     cmake .
     make
@@ -35,7 +35,7 @@ debugging).
 
     - Running all tests
 
-        ```sh
+        ```shell
         cd ../../bin
         ./skunit_tests
         ```
@@ -53,7 +53,7 @@ debugging).
 
     - Running a specific test
 
-        ```sh
+        ```shell
         ./skunit_tests [test name or tag]
         ```
 
@@ -68,9 +68,9 @@ debugging).
 
 # New workflow
 
-The details will depend on which VS Code extension is used, but this example using the CMake Tools extension shows that the
-process can be much smoother while offering handy features like test listing and debugging within VS Code, albeit with
-extra setup.
+The details depend on which VS Code extension is used, but this example using the CMake Tools extension shows that the
+process can be much smoother.
+This also offers features like test listing and debugging in VS Code, albeit with extra setup.
 
 ## Linux
 
@@ -78,27 +78,27 @@ extra setup.
 
     - Update
 
-        ```sh
+        ```shell
         sudo apt-get update
         sudo apt-get upgrade -y
         ```
 
     - Install packages
 
-        ```sh
+        ```shell
         sudo apt-get install -y \
         git build-essential cmake g++ libpng-dev libcurl4-openssl-dev libsdl2-dev \
         libsdl2-mixer-dev libsdl2-gfx-dev libsdl2-image-dev libsdl2-net-dev libsdl2-ttf-dev \
         libmikmod-dev libbz2-dev libflac-dev libvorbis-dev libwebp-dev libfreetype6-dev
         ```
 
-    - Install CMake Tools within VS Code's extension browser or from https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools
+    - Install CMake Tools from VS Code's extension browser or from https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools
 
 2. Configure extension
 
     - Select ${workspaceFolder}/projects/cmake/CMakeLists.txt
 
-    - Select Linux configure preset
+    - Select the Linux configure preset
 
     - On the CMake Tools extension tab set the Build target to skunit_tests
 
@@ -149,9 +149,9 @@ extra setup.
 
     Building can be done from the terminal, as before, or within VS Code in one of the following ways
 
-    - In the CMake Tools extension, click Build
+    - In the CMake Tools extension, select Build
 
-    - On the Testing tab, click Refresh Tests
+    - On the Testing tab, select Refresh Tests
 
 5. Run unit tests
 
@@ -159,14 +159,14 @@ extra setup.
     
     - Running all tests
 
-        Click Run Tests, each test will be run and the status of each can be seen in the test list.
+        Select Run Tests, each test will be run and the status of each can be seen in the test list.
 
     - Running a specific test
 
-        Click Run Test next to any test on the test list to run it
+        Select Run Test next to any test on the test list to run it
 
 6. Run unit tests with debugging
 
-    Break points can be set in VS Code like in normal programs, by clicking the red next to a line in a test or
-    pressing F9. Then, click Debug Tests to run all tests with debugging or Debug Test next to the test name to
+    Break points can be set in VS Code like in normal programs, by selecting the red next to a line in a test or
+    pressing F9. Then, select Debug Tests to run all tests with debugging or Debug Test next to the test name to
     run a specific test with debugging.
